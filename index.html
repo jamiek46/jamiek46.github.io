@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine's Day Proposal</title>
+  <style>
+    body {
+      background-color: #ffd9e3; /* Light pink background color */
+      text-align: center;
+      background-image: url('https://i.imgur.com/xLgkR33.jpg'); /* Replace with your hosted rose image URL */
+      background-size: cover;
+      margin: 0; /* Remove default margin */
+      height: 100vh; /* Set full height of the viewport */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #proposal-text {
+      margin-top: 24px; /* Adjusted margin */
+      font-size: 24px;
+      color: #333;
+    }
+
+    #buttons {
+      margin-top: 20px;
+    }
+
+    .button {
+      font-size: 18px; /* Slightly larger buttons */
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+    }
+
+    #yes-button,
+    #no-button {
+      background-color: white;
+      color: black;
+      padding: 25px 45px; /* Slightly larger Yes button */
+    }
+
+    #yes-button:hover,
+    #no-button:hover {
+      background-color: #f0f0f0; /* Light gray on hover */
+    }
+
+    #yes-button:active,
+    #no-button:active {
+      background-color: #e0e0e0; /* Slightly darker on click */
+    }
+
+    #yes-button {
+      background-color: white;
+      color: black;
+      animation: heartbeat 1s infinite; /* Heartbeat animation */
+    }
+
+    #no-button {
+      background-color: white;
+      color: black;
+    }
+
+    #heart-emoji {
+      font-size: 160px; /* Four times larger */
+      margin-top: 36px; /* Lowered position */
+      display: none;
+      animation: heartbeat 1s infinite; /* Heartbeat animation */
+    }
+
+    #thankyou-text,
+    #see-you-text {
+      font-size: 24px;
+      margin-top: 18px; /* Adjusted margin */
+      display: none;
+    }
+
+    @keyframes heartbeat {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="proposal-text">
+    <p>Trisha,will you be my valentine?</p>
+  </div>
+  <div id="buttons">
+    <button id="yes-button" class="button" onclick="showHeart()">Yes</button>
+    <button id="no-button" class="button">No</button>
+  </div>
+  <div id="thankyou-text">SEE YOU THEN!</div>
+  <div id="see-you-text">SEE YOU THEN!</div>
+  <div id="heart-emoji">❤️</div>
+
+  <script>
+    function showHeart() {
+      document.getElementById('yes-button').style.display = 'none';
+      document.getElementById('no-button').style.display = 'none';
+      document.getElementById('heart-emoji').style.display = 'block';
+      document.getElementById('see-you-text').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
